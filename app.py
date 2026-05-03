@@ -32,8 +32,7 @@ def dashboard():
         return redirect('/')
 
     # Simulate pipeline status
-    status_list = ["SUCCESS", "RUNNING", "FAILED"]
-    status = random.choice(status_list)
+    status = "SUCCESS"
 
     # Simulate pipeline metrics
     build_time = str(datetime.datetime.now())
