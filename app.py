@@ -1,9 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
+import datetime
+
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "DevOps CI/CD Project Running Successfully!"
+    return render_template('dashboard.html',
+                           status="SUCCESS",
+                           time=str(datetime.datetime.now()))
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(port=5050)
