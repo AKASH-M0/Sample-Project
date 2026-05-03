@@ -87,5 +87,23 @@
     Automated using CI/CD Pipeline (Jenkins + GitHub)
 </div>
 
+<canvas id="pipelineChart" width="400" height="200"></canvas>
+
+<script>
+const ctx = document.getElementById('pipelineChart').getContext('2d');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Build', 'Test', 'Deploy'],
+        datasets: [{
+            label: 'Pipeline Time (seconds)',
+            data: [10, 5, 8],
+            borderWidth: 1
+        }]
+    },
+});
+</script>
+
 </body>
 </html>
