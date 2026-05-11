@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, session
 import datetime
 import random
 
-app = Flask(_name_)
+app = Flask(__name__)
 app.secret_key = "devops_secret_key"
 
 # Dummy login credentials
